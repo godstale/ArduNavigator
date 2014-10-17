@@ -86,12 +86,14 @@ char getDir(){
 unsigned int getDist(){
   navDist = 0;
   navDist+=int( (btMessage[0] & 0x07) << 7);
-  navDist+=int( (btMessage[1] & 0x7f) );
+  navDist+=int( (btMessage[1] & 0x7e) );
+  
+  if(navUnit=='f')navDist*=5;
 }
 
 unsigned int getAngle(){
   navAng = 0;
-  navAng+=int( (btMessage[1] & 0x80) << 8);
+  navAng+=int( (btMessage[1] & 0x01) << 8);
   navAng+=int( (btMessage[2] & 0xff) );
 
 }

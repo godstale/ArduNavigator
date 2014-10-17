@@ -5,7 +5,7 @@ void calcAng(){
   diff=abs(b-a);
 
   if(diff>asp){ //calculates angular speed adding to the default one the acceleration
-    uasp=asp+(diff/haste);
+    uasp=asp+(diff/aac);
   }
   else uasp=0;
 
@@ -19,7 +19,7 @@ void calcAng(){
     a+=uasp;
 
   if(b<a && diff>=180)
-    a-=uasp;
+    a+=uasp;
 
   if(b<a && diff<180)
     a-=uasp;

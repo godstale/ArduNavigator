@@ -39,13 +39,13 @@ unsigned int navDist , navAng; //distance,angle
 
 //----- Graphic stuff
 const short
-cex=SSD1306_LCDWIDTH/2,  //center coordinates
-cey=SSD1306_LCDHEIGHT/2,
+  cex=SSD1306_LCDWIDTH/2,  //center coordinates
+  cey=SSD1306_LCDHEIGHT/2,
 
-ox=cex+20,
-oy=cey,
+  ox=cex+20,
+  oy=cey,
 
-r=20,asp=3,haste=5;  //circle radius,default angular speed,acceleration
+  r=20,asp=3,aac=6;  //circle radius,default angular speed,acceleration (acceleration decreases as the value of aac increases)
 
 float a,b,diff,ar,br,uasp,  //arrow angle,destination angle,their radiants counterparts, "updated" angular speed
 ax,bx,cx,ay,by,cy,mx,my,dx,dy;  //coordinates of arrow vertexes and of destination
